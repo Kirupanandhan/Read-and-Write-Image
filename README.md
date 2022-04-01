@@ -19,35 +19,53 @@ Use imwrite(filename, image) to write the image.
 ### Step5:
 End the program and close the output image windows.
 ## Program:
-### Developed By:
-### Register Number: 
-i) #To Read,display the image
+### Developed By:Kirupanandhan.T
+### Register Number: 21001418
+ # To Read,display the image
 ```
   import cv2
+img=cv2.imread('WillSmith.jpg',1)
+cv2.imshow('colorimage',img)
+cv2.waitKey(0)
+
+cv2.destroyAllWindows()
 
 ```
-ii) #To write the image
+ # To write the image
 ```
-
-
-
-```
-iii) #Find the shape of the Image
-``python3
-
-
-
-```
-iv) #To access rows and columns
-```python3
-
+cv2.imwrite('will.jpg',img)
 
 
 ```
-v) #To cut and paste portion of image
-```python3
+ # Find the shape of the Image
+```
+
+print(img.shape)
+
+```
+# To access rows and columns
+```
+import random
+for i in range(100):
+    for j in range(img.shape[1]):
+        img[i][j]=[random.randint(0,255),random.randint(0,255),random.randint(0,255)]
+
+cv2.imshow("image",img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 
+```
+# To cut and paste portion of image
+```
+
+import cv2
+img=cv2.imread('WillSmith.jpg',-1)
+tag=img[100:150,100:150]
+img[50:100,50:100]=tag
+cv2.imshow('image',img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
 
 ```
 
@@ -55,25 +73,25 @@ v) #To cut and paste portion of image
 
 ### i) Read and display the image
 
-<br>
+![](./op1.png)
 <br>
 
 ### ii)Write the image
 
-<br>
+![o](./op1.png)
 <br>
 
 ### iii)Shape of the Image
 
-<br>
+![o](./opshape.png)
 <br>
 
 ### iv)Access rows and columns
-<br>
+![o](./op2.png)
 <br>
 
 ### v)Cut and paste portion of image
-<br>
+![o](op3.png)
 <br>
 
 ## Result:
